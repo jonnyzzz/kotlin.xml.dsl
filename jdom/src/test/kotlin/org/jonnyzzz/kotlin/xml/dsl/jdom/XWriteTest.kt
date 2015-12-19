@@ -4,12 +4,10 @@ import org.junit.Assert
 import org.junit.Test
 
 public class XWriteTest {
-  private val XML = JDOM
-
   @Test
   public fun testWriteXML() {
 
-    val x = XML.write("test") {
+    val x = jdom("test") {
       attribute("a", "b")
       element("c") {
         attribute("d", "e")
@@ -27,7 +25,7 @@ public class XWriteTest {
   @Test
   public fun testWriteXML_TEXT() {
 
-    val x = XML.write("test") {
+    val x = jdom("test") {
       text("aaaa")
     }
 
@@ -38,7 +36,7 @@ public class XWriteTest {
   @Test
   public fun testWriteXML_text_and_element() {
 
-    val x = XML.write("test") {
+    val x = jdom("test") {
       element("zzz")
       text("aaaa")
     }
@@ -51,7 +49,7 @@ public class XWriteTest {
   @Test
   public fun testWriteXML_CDATA_and_element() {
 
-    val x = XML.write("test") {
+    val x = jdom("test") {
       element("zzz")
       cdata("aaaa")
     }
@@ -64,7 +62,7 @@ public class XWriteTest {
   @Test
   public fun testWriteXML_CDATA() {
 
-    val x = XML.write("test") {
+    val x = jdom("test") {
       cdata("aaaa")
     }
 
