@@ -17,6 +17,23 @@ MIT
 You can freely use this library or sources
 in the way you like
 
+Binaries
+========
+
+You may download binaries from maven artifacts repository from here
+http://dl.bintray.com/jonnyzzz/maven
+
+In Gradle build script it may be done like this
+```gradle
+repositories {
+  maven { url "http://dl.bintray.com/jonnyzzz/maven" }
+}
+
+dependencies {
+  compile "org.jonnyzzz.kotlin.xml.dsl:jdom:<VERSION>"
+}
+```
+
 Usage example
 -------------
 
