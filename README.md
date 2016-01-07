@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/jonnyzzz/kotlin.xml.dsl.svg?branch=master)](https://travis-ci.org/jonnyzzz/kotlin.xml.dsl)
+
 Kotlin XML DLS
 ==============
 
