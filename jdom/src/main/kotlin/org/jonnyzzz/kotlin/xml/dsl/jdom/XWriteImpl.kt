@@ -6,7 +6,7 @@ import org.jdom2.Element
 import org.jdom2.Text
 import org.jonnyzzz.kotlin.xml.dsl.XWriter
 
-public fun jdom(rootElementName: String, builder: XWriter.() -> Unit = {}): Element {
+fun jdom(rootElementName: String, builder: XWriter.() -> Unit = {}): Element {
   val element = Element(rootElementName)
   object : XWriter {
     override fun attribute(name: String, value: String) {
