@@ -3,9 +3,8 @@ package org.jonnyzzz.kotlin.xml.dsl.jdom
 import org.junit.Assert
 import org.junit.Test
 
-public class XWriteTest {
-  @Test
-  public fun testWriteXML() {
+class XWriteTest {
+  @Test fun testWriteXML() {
 
     val x = jdom("test") {
       attribute("a", "b")
@@ -22,8 +21,7 @@ public class XWriteTest {
     Assert.assertEquals(x.getChild("c")!!.getAttributeValue("d"), "e")
   }
 
-  @Test
-  public fun testWriteXML_TEXT() {
+  @Test fun testWriteXML_TEXT() {
 
     val x = jdom("test") {
       text("aaaa")
@@ -33,8 +31,7 @@ public class XWriteTest {
     Assert.assertEquals(x.textTrim, "aaaa")
   }
 
-  @Test
-  public fun testWriteXML_text_and_element() {
+  @Test fun testWriteXML_text_and_element() {
 
     val x = jdom("test") {
       element("zzz")
@@ -46,8 +43,7 @@ public class XWriteTest {
     Assert.assertNotNull(x.getChild("zzz"))
   }
 
-  @Test
-  public fun testWriteXML_CDATA_and_element() {
+  @Test fun testWriteXML_CDATA_and_element() {
 
     val x = jdom("test") {
       element("zzz")
@@ -59,8 +55,7 @@ public class XWriteTest {
     Assert.assertNotNull(x.getChild("zzz"))
   }
 
-  @Test
-  public fun testWriteXML_CDATA() {
+  @Test fun testWriteXML_CDATA() {
 
     val x = jdom("test") {
       cdata("aaaa")
